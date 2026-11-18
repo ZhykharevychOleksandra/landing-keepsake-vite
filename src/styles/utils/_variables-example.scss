@@ -1,0 +1,39 @@
+$colors: (
+  'accent': #f95858,
+  'accent-hover': #e44646,
+  'teal': #2cd5c4,
+  'text-dark': #3a3a3c,
+  'text': #666a6e,
+  'muted': #9aa0a6,
+  'bg-light': #f0f3f4,
+  'border': #e1e5e8,
+  'border-button': #d5dadd,
+  'border-light': #e6eaec,
+  'footer': #2a2a2d,
+  'overlay': rgba(30, 32, 36, 0.82),
+  'white': #ffffff,
+  'card-bg': #4c4c57,
+  'logo': #b9bec3,
+  'dot': #cfd5d9,
+  'footer-muted': #8e9297,
+  'footer-subtle': #777b80,
+  'footer-link': #a9adb3,
+  'footer-field': #38383c,
+  'footer-field-border': #47474c,
+  'footer-divider': #3b3b40,
+  'social-rss': #f7a64a,
+  'social-f': #4d6db3,
+  'social-tw': #20b5e9,
+  'social-dr': #ee7cb0,
+  'social-p': #e84849
+);
+
+$breakpoints: (
+  'sm': 400px,
+  'md': 768px,
+  'lg': 1280px
+);
+
+$font-oswald: 'Oswald', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-dancing-script: 'Dancing Script', cursive;

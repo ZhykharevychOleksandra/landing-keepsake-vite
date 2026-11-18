@@ -1,0 +1,17 @@
+section#journal.section.journal
+  .container
+    .journal-title-box
+      h2.section-title From the journal
+    p.section-desc Notes on process, case studies and things that inspire us.
+    .journal-grid
+      each post in journalPosts
+        article.journal-card
+          .journal-thumb
+            +picture(post.image, post.alt, 150, 150)
+          .journal-content
+            p.journal-meta #{post.date} / #{post.category}
+            h3.journal-title #{post.title}
+            p.journal-excerpt #{post.excerpt}
+            a.read-more(href="#journal")
+              span Read more
+              +icon('chevron')

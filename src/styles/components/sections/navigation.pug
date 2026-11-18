@@ -1,0 +1,18 @@
+nav.nav(aria-label="Primary navigation")
+  ul.nav-list
+    each item in navItems
+      li.nav-item
+        a.nav-link(href=item.href class={ active: item.active }) #{item.label}
+  .nav-actions
+    +btn('Contact us', '#contact', 'primary')(class="nav-mobile-btn")
+    button.btn-favourites(type="button" aria-label="Favourites")
+      +icon('heart')
+      span.btn-fav-text Favourites
+  .mobile-nav-info
+    span.mobile-nav-info-label Get in touch
+    a.mobile-nav-info-text(href="mailto:hello@keepsake.agency") hello@keepsake.agency
+    a.mobile-nav-info-text(href="tel:+442079460920") +44 20 7946 0920
+  ul.socials.nav-socials
+    each social in socials
+      li
+        a.social-icon(href=social.href class=`social-${social.name}` aria-label=social.label) #{social.name}
