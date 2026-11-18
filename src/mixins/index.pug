@@ -56,20 +56,45 @@ mixin icon(name, extraClass = '')
       when 'check'
         polyline(points="20 6 9 17 4 12")
 
-//- 3. Міксин адаптивного зображення <picture>
-mixin picture(name, alt, width, height, imgClass = '', lazy = true)
+//- 3. Міксин адаптивного зображення <picture> з srcset та sizes
+mixin picture(name, alt, width, height, imgClass = '', lazy = true, sizes = '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw')
+  - const basePath = `./assets/images/${name}`
   picture
-    source(type="image/avif" srcset=`/src/assets/images/${name}.avif`)
-    source(type="image/webp" srcset=`/src/assets/images/${name}.webp`)
+    source(
+      type="image/avif"
+      srcset=`${basePath}-400.avif 400w, ${basePath}-800.avif 800w`
+      sizes=sizes
+    )
+    source(
+      type="image/webp"
+      srcset=`${basePath}-400.webp 400w, ${basePath}-800.webp 800w`
+      sizes=sizes
+    )
     if lazy
-      img(src=`/src/assets/images/${name}.jpg` alt=alt width=width height=height class=imgClass loading="lazy" decoding="async")&attributes(attributes)
+      img(
+        src=`${basePath}-800.jpg`
+        alt=alt
+        width=width
+        height=height
+        class=imgClass
+        loading="lazy"
+        decoding="async"
+      )&attributes(attributes)
     else
-      img(src=`/src/assets/images/${name}.jpg` alt=alt width=width height=height class=imgClass)&attributes(attributes)
+      img(
+        src=`${basePath}-800.jpg`
+        alt=alt
+        width=width
+        height=height
+        class=imgClass
+        fetchpriority="high"
+        decoding="async"
+      )&attributes(attributes)
 
 //- 4. Міксин картки портфоліо
 mixin work-card(work)
   article.work-card(data-category=work.category tabindex="0")
-    +picture(work.image, work.alt, 400, 316, 'card-img')
+    +picture(work.image, work.alt, 800, 632, 'card-img')
     .hover-overlay
       span.plus-icon
         +icon('plus')

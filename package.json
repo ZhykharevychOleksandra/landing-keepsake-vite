@@ -6,11 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "images": "node scripts/optimize-images.js"
   },
   "devDependencies": {
     "@vituum/vite-plugin-pug": "^2.0.1",
+    "autoprefixer": "^10.6.2",
     "sass": "^1.108.2",
+    "sharp": "^0.35.5",
     "vite": "^8.3.8",
     "vituum": "^2.0.2"
   }
