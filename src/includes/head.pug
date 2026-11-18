@@ -1,2 +1,9 @@
-head
-    title My Great Site🥳
+include ./meta.pug
+block meta
+title
+  block title
+
+    | Keepsake | Digital & Branding Agency
+include ./fonts.pug
+block styles
+  link(rel="stylesheet" href="/src/styles/main.scss")

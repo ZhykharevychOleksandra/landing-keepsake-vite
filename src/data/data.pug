@@ -1,0 +1,119 @@
+//- src/data/data.pug
+-
+  const navItems = [
+    { label: 'Home', href: '#top', active: true },
+    { label: 'About us', href: '#services', active: false },
+    { label: 'Our works', href: '#works', active: false },
+    { label: 'Journal', href: '#journal', active: false },
+    { label: 'Contact', href: '#contact', active: false }
+  ]
+
+  const filterCategories = [
+    { id: 'filter-all', value: 'all', label: 'All', checked: true },
+    { id: 'filter-branding', value: 'branding', label: 'Branding', checked: false },
+    { id: 'filter-identity', value: 'identity', label: 'Identity', checked: false },
+    { id: 'filter-print', value: 'print', label: 'Print', checked: false },
+    { id: 'filter-web', value: 'web', label: 'Web', checked: false },
+    { id: 'filter-motion', value: 'motion', label: 'Motion', checked: false }
+  ]
+
+  const works = [
+    { title: 'Mockup Tag', category: 'branding', categoryLabel: 'Branding', image: 'work-01', alt: 'Mockup Tag branding project' },
+    { title: 'Piece Paper', category: 'print', categoryLabel: 'Print', image: 'work-02', alt: 'Piece Paper print project' },
+    { title: 'Vinyl Branding', category: 'identity', categoryLabel: 'Identity', image: 'work-03', alt: 'Vinyl Branding identity project' },
+    { title: 'Editorial Print', category: 'print', categoryLabel: 'Print', image: 'work-04', alt: 'Editorial Print project' },
+    { title: 'Profile UI', category: 'web', categoryLabel: 'Web', image: 'work-05', alt: 'Profile UI web design project' },
+    { title: 'Brand Assets', category: 'branding', categoryLabel: 'Branding', image: 'work-06', alt: 'Brand Assets branding project' },
+    { title: 'WallSt Identity', category: 'identity', categoryLabel: 'Identity', image: 'work-07', alt: 'WallSt Identity project' },
+    { title: 'Studio Website', category: 'web', categoryLabel: 'Web', image: 'work-08', alt: 'Studio Website web design project' },
+    { title: 'Motion Reel', category: 'motion', categoryLabel: 'Motion', image: 'work-09', alt: 'Motion Reel video project' }
+  ]
+
+  const services = [
+    { icon: 'web', title: 'Web design', text: 'Responsive sites and product interfaces that look sharp on every screen.' },
+    { icon: 'motion', title: 'Motion video', text: 'Explainers, logo animations and social clips that bring brands to life.' },
+    { icon: 'print', title: 'Print design', text: 'Posters, packaging and stationery prepared to be printed right.' },
+    { icon: 'heart', title: 'Illustration', text: 'Custom illustrations and icon sets in a style that is yours alone.' }
+  ]
+
+  const stats = [
+    { number: '120+', label: 'Projects done' },
+    { number: '8', label: 'Years in craft' },
+    { number: '64', label: 'Happy clients' },
+    { number: '15', label: 'Design awards' }
+  ]
+
+  const clientLogos = [
+    { name: 'NORDLY', modifier: 'logo-nordly' },
+    { name: 'Halcyon', modifier: 'logo-halcyon' },
+    { name: 'ARCO', modifier: 'logo-arco' },
+    { name: 'pinewood', modifier: 'logo-pinewood' },
+    { name: 'VELA', modifier: 'logo-vela' },
+    { name: 'ostra', modifier: 'logo-ostra' }
+  ]
+
+  const journalPosts = [
+    {
+      date: 'Oct 13, 2026',
+      category: 'Identity',
+      title: 'Sollicitudin tortor inceptos',
+      excerpt: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.',
+      image: 'journal-01',
+      alt: 'Journal article preview'
+    },
+    {
+      date: 'Oct 23, 2026',
+      category: 'Branding',
+      title: 'Amet inceptos fringilla fusce',
+      excerpt: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.',
+      image: 'journal-02',
+      alt: 'Branding case study preview'
+    },
+    {
+      date: 'Sep 19, 2026',
+      category: 'Identity',
+      title: 'Cursus malesuada justo',
+      excerpt: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.',
+      image: 'journal-03',
+      alt: 'Identity design article preview'
+    },
+    {
+      date: 'Sep 27, 2026',
+      category: 'Branding',
+      title: 'Ornare cursus bibendum purus',
+      excerpt: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.',
+      image: 'journal-04',
+      alt: 'Branding notes preview'
+    }
+  ]
+
+  const footerColumns = [
+    {
+      heading: 'Studio',
+      links: [
+        { label: 'About us', href: '#services' },
+        { label: 'Our works', href: '#works' },
+        { label: 'Journal', href: '#journal' },
+        { label: 'Careers', href: '#contact' },
+        { label: 'Contact', href: '#contact' }
+      ]
+    },
+    {
+      heading: 'Services',
+      links: [
+        { label: 'Web design', href: '#services' },
+        { label: 'Motion video', href: '#services' },
+        { label: 'Print design', href: '#services' },
+        { label: 'Illustration', href: '#services' },
+        { label: 'Brand strategy', href: '#services' }
+      ]
+    }
+  ]
+
+  const socials = [
+    { name: 'rss', label: 'RSS', href: '#' },
+    { name: 'f', label: 'Facebook', href: '#' },
+    { name: 'tw', label: 'Twitter', href: '#' },
+    { name: 'dr', label: 'Dribbble', href: '#' },
+    { name: 'p', label: 'Pinterest', href: '#' }
+  ]

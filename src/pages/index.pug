@@ -1,4 +1,14 @@
 extends ../layouts/main.pug
 
+append meta
+  meta(name="description" content="Keepsake — digital & branding agency specializing in web design, poster, motion video, based in London.")
+  meta(property="og:title" content="Keepsake | Digital & Branding Agency")
+  meta(property="og:type" content="website")
+
 block content
-  h1 Keepsake
+  include ../components/sections/hero.pug
+  include ../components/sections/works.pug
+  include ../components/sections/cta.pug
+  include ../components/sections/services.pug
+  include ../components/sections/clients.pug
+  include ../components/sections/journal.pug
