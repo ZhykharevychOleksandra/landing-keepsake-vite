@@ -2,7 +2,7 @@ include ../data/data.pug
 include ../mixins/index.pug
 
 doctype html
-html(lang="en")
+html(lang='en')
   head
     include ../includes/head.pug
   body#top
@@ -10,6 +10,6 @@ html(lang="en")
     main
       block content
     include ../components/footer.pug
-    a.to-top-btn(href="#top" aria-label="Back to top")
+    a.to-top-btn(href='#top', aria-label='Back to top')
       +icon('arrow-up')
     block scripts

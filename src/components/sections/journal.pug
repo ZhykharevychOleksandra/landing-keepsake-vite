@@ -9,9 +9,9 @@ section#journal.section.journal
           .journal-thumb
             +picture(post.image, post.alt, 150, 150)
           .journal-content
-            p.journal-meta #{post.date} / #{post.category}
-            h3.journal-title #{post.title}
-            p.journal-excerpt #{post.excerpt}
-            a.read-more(href="#journal")
+            p.journal-meta #{ post.date } / #{ post.category }
+            h3.journal-title #{ post.title }
+            p.journal-excerpt #{ post.excerpt }
+            a.read-more(href='#journal')
               span Read more
               +icon('chevron')

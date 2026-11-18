@@ -7,10 +7,10 @@ section#services.section.services
         article.service-card
           .service-icon-bg
             +icon(service.icon)
-          h3.service-title #{service.title}
-          p.service-text #{service.text}
+          h3.service-title #{ service.title }
+          p.service-text #{ service.text }
     .stats-grid
       each stat in stats
         .stat-item
-          p.stat-number #{stat.number}
-          p.stat-label #{stat.label}
+          p.stat-number #{ stat.number }
+          p.stat-label #{ stat.label }

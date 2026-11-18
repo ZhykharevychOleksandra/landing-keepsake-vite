@@ -1,14 +1,20 @@
 section#works.works
   .container
     each cat in filterCategories
-      input.filter-radio(type="radio" name="works-filter" id=cat.id checked=cat.checked)
+      input.filter-radio(
+        type='radio',
+        name='works-filter',
+        id=cat.id,
+        class=`filter-radio--${cat.value}`,
+        checked=cat.checked
+      )
     .works-head
       h2.section-title Our awesome works
       .filter-chips
         each cat in filterCategories
-          label.chip(for=cat.id) #{cat.label}
+          label.chip(for=cat.id) #{ cat.label }
     .works-grid
       each work in works
         +work-card(work)
     .load-more
-      +btn('Load more works', '#works', 'secondary')(class="btn-load-more")
+      +btn('Load more works', '#works', 'secondary').btn-load-more

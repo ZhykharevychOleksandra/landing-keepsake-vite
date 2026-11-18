@@ -1,9 +1,12 @@
 extends ../layouts/main.pug
 
-append meta
-  meta(name="description" content="Keepsake — digital & branding agency specializing in web design, poster, motion video, based in London.")
-  meta(property="og:title" content="Keepsake | Digital & Branding Agency")
-  meta(property="og:type" content="website")
+block append meta
+  meta(
+    name='description',
+    content='Keepsake — digital & branding agency specializing in web design, poster, motion video, based in London.'
+  )
+  meta(property='og:title', content='Keepsake | Digital & Branding Agency')
+  meta(property='og:type', content='website')
 
 block content
   include ../components/sections/hero.pug

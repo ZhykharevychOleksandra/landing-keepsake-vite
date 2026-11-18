@@ -98,12 +98,12 @@
   }
 }
 
-#filter-all:checked ~ .works-head .chip[for='filter-all'],
-#filter-branding:checked ~ .works-head .chip[for='filter-branding'],
-#filter-identity:checked ~ .works-head .chip[for='filter-identity'],
-#filter-print:checked ~ .works-head .chip[for='filter-print'],
-#filter-web:checked ~ .works-head .chip[for='filter-web'],
-#filter-motion:checked ~ .works-head .chip[for='filter-motion'] {
+.filter-radio--all:checked ~ .works-head .chip[for='filter-all'],
+.filter-radio--branding:checked ~ .works-head .chip[for='filter-branding'],
+.filter-radio--identity:checked ~ .works-head .chip[for='filter-identity'],
+.filter-radio--print:checked ~ .works-head .chip[for='filter-print'],
+.filter-radio--web:checked ~ .works-head .chip[for='filter-web'],
+.filter-radio--motion:checked ~ .works-head .chip[for='filter-motion'] {
   border-color: var(--color-accent);
   background-color: var(--color-accent);
   color: var(--color-white);
@@ -180,15 +180,15 @@
   color: var(--color-teal);
 }
 
-#filter-branding:checked ~ .works-grid .work-card:not([data-category='branding']),
-#filter-identity:checked ~ .works-grid .work-card:not([data-category='identity']),
-#filter-print:checked ~ .works-grid .work-card:not([data-category='print']),
-#filter-web:checked ~ .works-grid .work-card:not([data-category='web']),
-#filter-motion:checked ~ .works-grid .work-card:not([data-category='motion']) {
+.filter-radio--branding:checked ~ .works-grid .work-card:not([data-category='branding']),
+.filter-radio--identity:checked ~ .works-grid .work-card:not([data-category='identity']),
+.filter-radio--print:checked ~ .works-grid .work-card:not([data-category='print']),
+.filter-radio--web:checked ~ .works-grid .work-card:not([data-category='web']),
+.filter-radio--motion:checked ~ .works-grid .work-card:not([data-category='motion']) {
   display: none;
 }
 
-#filter-all:checked ~ .works-grid .work-card:nth-child(n + 6) {
+.filter-radio--all:checked ~ .works-grid .work-card:nth-child(n + 6) {
   display: none;
 
   @include mq(md) {
@@ -196,7 +196,7 @@
   }
 }
 
-#filter-all:checked ~ .works-grid .work-card:nth-child(n + 9) {
+.filter-radio--all:checked ~ .works-grid .work-card:nth-child(n + 9) {
   @include mq(md) {
     display: none;
   }

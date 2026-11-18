@@ -6,98 +6,100 @@ mixin btn(text, href, variant = 'primary')
     const btnClasses = ['btn']
     if (variant) btnClasses.push(`btn-${variant}`)
   if href
-    a(href=href class=btnClasses)&attributes(attributes)
+    a(href=href, class=btnClasses)&attributes(attributes)
       if block
         block
       else
-        | #{text}
+        | #{ text }
   else
-    button(type=attributes.type || 'button' class=btnClasses)&attributes(attributes)
+    button(type=attributes.type || 'button', class=btnClasses)&attributes(attributes)
       if block
         block
       else
-        | #{text}
+        | #{ text }
 
 //- 2. Міксин SVG-іконок через case / when
 mixin icon(name, extraClass = '')
-  - const iconClass = extraClass ? `icon icon-${name} ${extraClass}` : `icon icon-${name}`
-  svg(class=iconClass aria-hidden="true" width="24" height="24" viewBox="0 0 24 24")&attributes(attributes)
+  - const iconClass = extraClass ? `icon icon-${name} ${extraClass}` : `icon icon-${name}`;
+  svg(class=iconClass, aria-hidden='true', width='24', height='24', viewBox='0 0 24 24')&attributes(attributes)
     case name
       when 'burger'
-        line(x1="3" y1="6" x2="21" y2="6")
-        line(x1="3" y1="12" x2="21" y2="12")
-        line(x1="3" y1="18" x2="21" y2="18")
+        line(x1='3', y1='6', x2='21', y2='6')
+        line(x1='3', y1='12', x2='21', y2='12')
+        line(x1='3', y1='18', x2='21', y2='18')
       when 'close'
-        line(x1="18" y1="6" x2="6" y2="18")
-        line(x1="6" y1="6" x2="18" y2="18")
+        line(x1='18', y1='6', x2='6', y2='18')
+        line(x1='6', y1='6', x2='18', y2='18')
       when 'heart'
-        path(d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z")
+        path(
+          d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'
+        )
       when 'plus'
-        line(x1="12" y1="5" x2="12" y2="19")
-        line(x1="5" y1="12" x2="19" y2="12")
+        line(x1='12', y1='5', x2='12', y2='19')
+        line(x1='5', y1='12', x2='19', y2='12')
       when 'mail'
-        rect(x="2" y="4" width="20" height="16" rx="2")
-        polyline(points="22,6 12,13 2,6")
+        rect(x='2', y='4', width='20', height='16', rx='2')
+        polyline(points='22,6 12,13 2,6')
       when 'chevron'
-        polyline(points="9 18 15 12 9 6")
+        polyline(points='9 18 15 12 9 6')
       when 'arrow-up'
-        line(x1="12" y1="19" x2="12" y2="5")
-        polyline(points="5 12 12 5 19 12")
+        line(x1='12', y1='19', x2='12', y2='5')
+        polyline(points='5 12 12 5 19 12')
       when 'web'
-        rect(x="2" y="3" width="20" height="14" rx="2")
-        line(x1="8" y1="21" x2="16" y2="21")
-        line(x1="12" y1="17" x2="12" y2="21")
+        rect(x='2', y='3', width='20', height='14', rx='2')
+        line(x1='8', y1='21', x2='16', y2='21')
+        line(x1='12', y1='17', x2='12', y2='21')
       when 'motion'
-        polygon(points="5 3 19 12 5 21 5 3")
+        polygon(points='5 3 19 12 5 21 5 3')
       when 'print'
-        polyline(points="6 9 6 2 18 2 18 9")
-        path(d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2")
-        rect(x="6" y="14" width="12" height="8")
+        polyline(points='6 9 6 2 18 2 18 9')
+        path(d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2')
+        rect(x='6', y='14', width='12', height='8')
       when 'check'
-        polyline(points="20 6 9 17 4 12")
+        polyline(points='20 6 9 17 4 12')
 
 //- 3. Міксин адаптивного зображення <picture> з srcset та sizes
 mixin picture(name, alt, width, height, imgClass = '', lazy = true, sizes = '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw')
-  - const basePath = `./assets/images/${name}`
+  - const basePath = `./assets/images/${name}`;
   picture
     source(
-      type="image/avif"
-      srcset=`${basePath}-400.avif 400w, ${basePath}-800.avif 800w`
+      type='image/avif',
+      srcset=`${basePath}-400.avif 400w, ${basePath}-800.avif 800w`,
       sizes=sizes
     )
     source(
-      type="image/webp"
-      srcset=`${basePath}-400.webp 400w, ${basePath}-800.webp 800w`
+      type='image/webp',
+      srcset=`${basePath}-400.webp 400w, ${basePath}-800.webp 800w`,
       sizes=sizes
     )
     if lazy
       img(
-        src=`${basePath}-800.jpg`
-        alt=alt
-        width=width
-        height=height
-        class=imgClass
-        loading="lazy"
-        decoding="async"
+        src=`${basePath}-800.jpg`,
+        alt=alt,
+        width=width,
+        height=height,
+        class=imgClass,
+        loading='lazy',
+        decoding='async'
       )&attributes(attributes)
     else
       img(
-        src=`${basePath}-800.jpg`
-        alt=alt
-        width=width
-        height=height
-        class=imgClass
-        fetchpriority="high"
-        decoding="async"
+        src=`${basePath}-800.jpg`,
+        alt=alt,
+        width=width,
+        height=height,
+        class=imgClass,
+        fetchpriority='high',
+        decoding='async'
       )&attributes(attributes)
 
 //- 4. Міксин картки портфоліо
 mixin work-card(work)
-  article.work-card(data-category=work.category tabindex="0")
+  article.work-card(data-category=work.category, tabindex='0')
     +picture(work.image, work.alt, 800, 632, 'card-img')
     .hover-overlay
       span.plus-icon
         +icon('plus')
-      h3.card-title #{work.title}
+      h3.card-title #{ work.title }
       span.card-divider
-      p.card-cat #{work.categoryLabel}
+      p.card-cat #{ work.categoryLabel }

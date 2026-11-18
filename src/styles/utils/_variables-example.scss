@@ -10,8 +10,8 @@ $colors: (
   'border-button': #d5dadd,
   'border-light': #e6eaec,
   'footer': #2a2a2d,
-  'overlay': rgba(30, 32, 36, 0.82),
-  'white': #ffffff,
+  'overlay': rgb(30 32 36 / 82%),
+  'white': #fff,
   'card-bg': #4c4c57,
   'logo': #b9bec3,
   'dot': #cfd5d9,
@@ -25,15 +25,13 @@ $colors: (
   'social-f': #4d6db3,
   'social-tw': #20b5e9,
   'social-dr': #ee7cb0,
-  'social-p': #e84849
+  'social-p': #e84849,
 );
-
 $breakpoints: (
   'sm': 400px,
   'md': 768px,
-  'lg': 1280px
+  'lg': 1280px,
 );
-
 $font-oswald: 'Oswald', sans-serif;
 $font-open-sans: 'Open Sans', sans-serif;
 $font-dancing-script: 'Dancing Script', cursive;
